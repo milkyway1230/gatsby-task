@@ -1,7 +1,7 @@
 const path = require("path")
 
-exports.createPages = ({ boundActionCreators, graphql }) => {
-  const { createPage } = boundActionCreators
+exports.createPages = ({ actions, graphql }) => {
+  const { createPage } = actions
 
   const postTemplate = path.resolve("src/templates/blog-post.js")
 
@@ -16,7 +16,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
               path
               title
               date
-              author
+              Author
             }
           }
         }
